@@ -12,6 +12,7 @@ public class MyFakebookOracle extends FakebookOracle {
     // You must use the following variable as the JDBC connection
     Connection oracleConnection = null;
 
+
     // You must refer to the following variables for the corresponding tables in your database
     String cityTableName = null;
     String userTableName = null;
@@ -135,8 +136,27 @@ public class MyFakebookOracle extends FakebookOracle {
         this.mostCommonFirstNames.add("Jane");
         this.mostCommonFirstNamesCount = 10;
         
-        try () {
+        try (Statement stmt = oracleConnection.createStatement()) {
 
+            this.mostCommonFirstNamesCount = 0;
+
+            // 1
+            while (rst.next()) {
+
+
+            }
+
+            // 2
+            while (rst.next()) {
+
+
+            }
+
+            // 3
+            while (rst.next()) {
+
+
+            }
 
         } catch (SQLException err) {
             System.err.println(err.getMessage());
